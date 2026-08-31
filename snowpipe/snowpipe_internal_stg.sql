@@ -36,8 +36,8 @@ FROM @ott_data
 PATTERN = 'netflix_titles.*\.csv\.gz'
 FILE_FORMAT = (FORMAT_NAME = csv_format);
 
--- Pipes will internal stages cannot be refreshed automatically
+-- Pipes with internal stages cannot be refreshed automatically
 -- Following code runs the pipe
 ALTER PIPE netflix_pipe REFRESH;
 
--- Output : Data is loaded to netflix_titles table
+-- Output : Data is loaded to "netflix_titles" table
